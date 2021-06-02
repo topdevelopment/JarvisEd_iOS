@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NdJ-Gk-Flc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlayfairDisplay-Medium.ttf">
+            <string>PlayfairDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Teacher DetailsVC-->
+        <scene sceneID="y4a-hj-y0B">
+            <objects>
+                <viewController id="NdJ-Gk-Flc" customClass="TeacherDetailsVC" customModule="JarvisEd_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GCe-vA-NqL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E51-u7-B6P">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem image="back" id="aj9-ql-mye">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="aBackButtonClicked:" destination="NdJ-Gk-Flc" id="iE8-sx-15k"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.61176470589999998" green="0.70588235290000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbe-F4-KZY">
+                                <rect key="frame" x="20" y="64" width="374" height="37.5"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Medium" family="Playfair Display" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUm-f1-8k5">
+                                <rect key="frame" x="20" y="772" width="374" height="90"/>
+                                <color key="backgroundColor" red="0.61176470589999998" green="0.70588235290000001" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Medium" family="Playfair Display" pointSize="16"/>
+                                <state key="normal" title="Delete Teacher">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="aDeleteTeacherButtonClicked:" destination="NdJ-Gk-Flc" eventType="touchUpInside" id="UMy-bQ-wqU"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="p2x-tQ-Sz8">
+                                <rect key="frame" x="10" y="121.5" width="394" height="630.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reportCell" rowHeight="80" id="xa8-o6-GEN" customClass="ReportTVC" customModule="JarvisEd_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xa8-o6-GEN" id="UCQ-kO-9JH">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wlr-YL-uwb">
+                                                    <rect key="frame" x="20" y="11" width="315" height="29.5"/>
+                                                    <fontDescription key="fontDescription" name="PlayfairDisplay-Medium" family="Playfair Display" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Report Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDJ-vN-zau">
+                                                    <rect key="frame" x="20" y="45.5" width="254" height="19"/>
+                                                    <fontDescription key="fontDescription" name="PlayfairDisplay-Medium" family="Playfair Display" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Wlr-YL-uwb" firstAttribute="width" secondItem="UCQ-kO-9JH" secondAttribute="width" multiplier="0.8" id="Er3-lK-6h8"/>
+                                                <constraint firstItem="Wlr-YL-uwb" firstAttribute="top" secondItem="UCQ-kO-9JH" secondAttribute="topMargin" id="Thf-L5-pOf"/>
+                                                <constraint firstItem="FDJ-vN-zau" firstAttribute="leading" secondItem="UCQ-kO-9JH" secondAttribute="leadingMargin" id="m4t-jO-X9Z"/>
+                                                <constraint firstItem="Wlr-YL-uwb" firstAttribute="leading" secondItem="UCQ-kO-9JH" secondAttribute="leading" constant="20" id="oIK-hD-DUk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FDJ-vN-zau" secondAttribute="trailing" constant="100" id="qTt-iI-aDy"/>
+                                                <constraint firstItem="FDJ-vN-zau" firstAttribute="top" secondItem="Wlr-YL-uwb" secondAttribute="bottom" constant="5" id="zVv-zU-HCJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="oReportTitleLabel" destination="Wlr-YL-uwb" id="qC6-Ot-Yrf"/>
+                                            <outlet property="oReportTypeLabel" destination="FDJ-vN-zau" id="9N8-Nm-SL1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="NdJ-Gk-Flc" id="Wd9-WK-q0y"/>
+                                    <outlet property="delegate" destination="NdJ-Gk-Flc" id="SZR-73-d3e"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ouO-y5-mI1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IUm-f1-8k5" firstAttribute="height" secondItem="GCe-vA-NqL" secondAttribute="height" multiplier="0.100446" id="3Ey-pC-e9V"/>
+                            <constraint firstItem="Lbe-F4-KZY" firstAttribute="top" secondItem="E51-u7-B6P" secondAttribute="bottom" constant="20" id="7qi-gN-hMz"/>
+                            <constraint firstItem="IUm-f1-8k5" firstAttribute="leading" secondItem="ouO-y5-mI1" secondAttribute="leading" constant="20" id="CSA-yq-v9L"/>
+                            <constraint firstItem="E51-u7-B6P" firstAttribute="leading" secondItem="GCe-vA-NqL" secondAttribute="leading" id="Hmc-Zq-LQP"/>
+                            <constraint firstItem="IUm-f1-8k5" firstAttribute="bottom" secondItem="ouO-y5-mI1" secondAttribute="bottom" id="RuA-S5-sJu"/>
+                            <constraint firstItem="ouO-y5-mI1" firstAttribute="trailing" secondItem="Lbe-F4-KZY" secondAttribute="trailing" constant="20" id="TAV-dA-JRq"/>
+                            <constraint firstItem="IUm-f1-8k5" firstAttribute="top" secondItem="p2x-tQ-Sz8" secondAttribute="bottom" constant="20" id="TDX-68-x0c"/>
+                            <constraint firstItem="p2x-tQ-Sz8" firstAttribute="top" secondItem="Lbe-F4-KZY" secondAttribute="bottom" constant="20" id="XKE-Zd-tMv"/>
+                            <constraint firstItem="Lbe-F4-KZY" firstAttribute="leading" secondItem="ouO-y5-mI1" secondAttribute="leading" constant="20" id="iwg-2C-yjg"/>
+                            <constraint firstItem="ouO-y5-mI1" firstAttribute="trailing" secondItem="p2x-tQ-Sz8" secondAttribute="trailing" constant="10" id="nUI-yq-Rff"/>
+                            <constraint firstAttribute="trailing" secondItem="E51-u7-B6P" secondAttribute="trailing" id="pKK-yZ-WBk"/>
+                            <constraint firstItem="ouO-y5-mI1" firstAttribute="trailing" secondItem="IUm-f1-8k5" secondAttribute="trailing" constant="20" id="tKd-zS-br9"/>
+                            <constraint firstItem="E51-u7-B6P" firstAttribute="top" secondItem="GCe-vA-NqL" secondAttribute="top" id="vrF-Og-buU"/>
+                            <constraint firstItem="p2x-tQ-Sz8" firstAttribute="leading" secondItem="ouO-y5-mI1" secondAttribute="leading" constant="10" id="zu5-a1-Zjb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="oTeacherNameLabel" destination="Lbe-F4-KZY" id="Gnt-mB-ZIx"/>
+                        <outlet property="oTeacherReportsTV" destination="p2x-tQ-Sz8" id="QvR-VE-RIn"/>
+                        <segue destination="Jse-vn-IuH" kind="showDetail" identifier="toLogin" id="ahA-sw-NCk"/>
+                        <segue destination="iaj-SF-hVr" kind="showDetail" identifier="toCore" id="hBb-GK-uQI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96o-L8-XV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="427.536231884058" y="-127.23214285714285"/>
+        </scene>
+        <!--CoreSB-->
+        <scene sceneID="gQg-c1-jyB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CoreSB" id="iaj-SF-hVr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VDM-WL-ah6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="-84"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="xWn-9i-GCW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="Jse-vn-IuH" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOm-KQ-IKh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198" y="-149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="36" height="36"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

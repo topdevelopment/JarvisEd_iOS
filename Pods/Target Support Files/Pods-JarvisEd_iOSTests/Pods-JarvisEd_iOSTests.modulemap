@@ -1,0 +1,6 @@
+framework module Pods_JarvisEd_iOSTests {
+  umbrella header "Pods-JarvisEd_iOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

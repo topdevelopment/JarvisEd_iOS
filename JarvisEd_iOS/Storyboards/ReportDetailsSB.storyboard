@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ud-yR-p7I">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Report DetailsVC-->
+        <scene sceneID="ang-63-HYS">
+            <objects>
+                <viewController id="2ud-yR-p7I" customClass="ReportDetailsVC" customModule="JarvisEd_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Sr-wm-bEg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSX-MM-vao">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem image="menu" id="4au-2y-GCa">
+                                        <connections>
+                                            <action selector="aMenuButtonClicked:" destination="2ud-yR-p7I" id="oPp-kv-Xm3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1sE-IX-blQ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nSX-MM-vao" firstAttribute="top" secondItem="2Sr-wm-bEg" secondAttribute="top" id="2I2-Nc-cOl"/>
+                            <constraint firstAttribute="trailing" secondItem="nSX-MM-vao" secondAttribute="trailing" id="ZVv-GN-bua"/>
+                            <constraint firstItem="nSX-MM-vao" firstAttribute="leading" secondItem="2Sr-wm-bEg" secondAttribute="leading" id="iYE-Qb-feO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="kV0-2W-OSY" kind="showDetail" identifier="toLogin" id="UhW-xX-pVT"/>
+                        <segue destination="AdZ-Tp-mNJ" kind="showDetail" identifier="toCore" id="H8s-Do-FzN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j17-Ml-yob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="310" y="-122"/>
+        </scene>
+        <!--CoreSB-->
+        <scene sceneID="zcN-eK-cxQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCO-95-iln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="CoreSB" id="AdZ-Tp-mNJ" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="-84"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Owx-ps-abt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="kV0-2W-OSY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBc-ax-cZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014" y="-146"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="72" height="72"/>
+    </resources>
+</document>
